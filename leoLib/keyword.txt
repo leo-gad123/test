@@ -1,0 +1,5 @@
+leogad     KEYWORD0
+SomaIntera KEYWORD1
+itaraAka   KEYWORD2
+itaraZima  KEYWORD3
+ledMode    KEYWORD4
