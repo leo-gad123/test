@@ -1,13 +1,27 @@
+; File: add.asm
+; Assemble: nasm -f win64 add.asm -o add.obj
+; Link:   gcc add.obj -o add.exe
+
 section .data
-    Dta db "MyGod", 10, 0        ; Add newline (10) and null terminator (0)
+    num1 dq 5          ; first number
+    num2 dq 10         ; second number
+    fmt db "Sum: %d", 10, 0  ; format string with newline
 
 section .text
     global main
     extern printf
 
 main:
-    sub rsp, 40                   ; Reserve 40 bytes (stack alignment for Windows x64 ABI)
-    lea rcx, [Dta]                ; Load address of Dta into RCX (1st argument to printf)
-    call printf                   ; Call printf(Dta)
-    add rsp, 40                   ; Restore stack
+    ; Load numbers into registers
+    mov rax, [num1]
+    add rax, [num2]    ; rax = num1 + num2
+
+    ; Prepare arguments for printf
+    mov rdi, fmt       ; first argument: format string
+    mov rsi, rax       ; second argument: value to print
+    xor rax, rax       ; rax = 0, required for variadic functions on Windows
+    call printf
+
+    ; Return 0
+    mov eax, 0
     ret
