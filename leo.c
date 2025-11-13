@@ -6,7 +6,7 @@ int main(){
    int columns=3;
    int data[row][columns];
    int d[3];
-
+  printf("this is my working simulator by using c  programming \n\n");
   printf("enter the elemeny of index: ");
    for (int i=0;i<row;i++){
       printf("\n");
