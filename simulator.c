@@ -54,5 +54,7 @@ int main(){
  printf("the value of x is : %d\n",x);
  printf(" the value of y is %d",z);
  printf("the value of z is %d ",y);
- return 0;
+
+
+ printf("next time is for inverse matrix");
 }
