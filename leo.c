@@ -2,15 +2,14 @@
 
 
 int main(){
-   int row=3;
-   int columns=3;
-   int data[row][columns];
+
+   int data[3][3];
    int d[3];
   printf("this is my working simulator by using c  programming \n\n");
   printf("enter the elemeny of index: ");
-   for (int i=0;i<row;i++){
+   for (int i=0;i<3;i++){
       printf("\n");
-   for (int a=0;a<columns;a++){
+   for (int a=0;a<3;a++){
     scanf("%d",&data[i][a]);
    }
    }
@@ -27,7 +26,7 @@ int main(){
     
    }
    }
-   printf("\n");
+   printf("\n\n");
 
  int determinant =data[0][0]*(data[1][1]*data[2][2] - data[2][1]*data[1][2])
                  - data[0][1]*(data[1][0]*data[2][2] - data[2][0]*data[1][2])
@@ -55,4 +54,5 @@ int main(){
  printf("the value of x is : %d\n",x);
  printf(" the value of y is %d",z);
  printf("the value of z is %d ",y);
+ return 0;
 }
