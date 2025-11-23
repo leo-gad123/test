@@ -8,7 +8,6 @@ int main() {
     printf("this is my working simulator by using c programming\n\n");
     printf("enter the element of index: ");
 
-    // Input 3×3 matrix
     for (int i = 0; i < 3; i++) {
         printf("\n");
         for (int a = 0; a < 3; a++) {
@@ -29,8 +28,6 @@ int main() {
         }
     }
     printf("\n\n");
-
-    // Calculate determinant
     int determinant =
           data[0][0] * (data[1][1] * data[2][2] - data[1][2] * data[2][1])
         - data[0][1] * (data[1][0] * data[2][2] - data[1][2] * data[2][0])
@@ -43,7 +40,6 @@ int main() {
         return 0;
     }
 
-    // Compute adjoint (cofactor matrix transpose)
     float adj[3][3];
 
     adj[0][0] =   (data[1][1] * data[2][2] - data[1][2] * data[2][1]);
@@ -58,7 +54,6 @@ int main() {
     adj[2][1] = - (data[0][0] * data[1][2] - data[0][2] * data[1][0]);
     adj[2][2] =   (data[0][0] * data[1][1] - data[0][1] * data[1][0]);
 
-    // Divide adjoint by determinant to get inverse
     printf("\nInverse Matrix:\n");
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
