@@ -1,0 +1,7 @@
+User pays via USSD / Mobile Money / App
+       ↓
+Payment confirmed by your backend
+       ↓
+Backend sends new credit to the meter (via GSM/WiFi/NB-IoT)
+       ↓
+Meter receives credit → updates balance → power continues automatically

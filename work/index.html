@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Security</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Face Recognition Security</h1>
+
+        <!-- Upload image -->
+        <input type="file" id="imageInput" accept="image/*">
+        <button id="uploadBtn">Upload & Recognize</button>
+
+        <!-- Recognition result -->
+        <div id="result"></div>
+
+        <!-- Add new authorized person -->
+        <div id="addPerson" style="display:none;">
+            <input type="text" id="newName" placeholder="Enter Person Name">
+            <button id="addBtn">Add as Authorized</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
